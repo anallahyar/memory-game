@@ -1,0 +1,25 @@
+.subhead{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-variant:normal;
+	font-weight: 500;
+	line-height: 20px;
+}
+
+.card {
+  display: inline-block;
+  float:left;
+  height: 200px;
+  width: 200px;
+
+  margin: 7px;
+  border-style: hidden;
+  border-radius: 7%;
+}
+
+img {
+  height: inherit;
+  width: inherit;
+  border-radius: 7%;
+}
