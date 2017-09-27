@@ -30,6 +30,15 @@ class Game extends React.Component {
     }))
   }
 
+// new function that will take one arguement, a "card src" (initial image url)
+
+    handleCardClicked = (cardSrc) => {
+      alert(cardSrc) }
+
+// create a new instance of the Card component. With the following props:
+  //  src: the url of the photo
+  //  whenClicked: a callback function which the card can invoke when it is clicked
+
   render () {
     return (
           <div>
@@ -37,7 +46,7 @@ class Game extends React.Component {
               <br/>
               <div className = 'subhead'><center>match the modes to win!</center></div></h1>
               {this.state.cards.map((card) => (
-                <Card src={card.src} /> //updating render function to use the state
+                <Card src={card.src} whenClicked={this.handleCardClicked} /> //updating render function to use the state
               ))}
           </div>
       )
