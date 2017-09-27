@@ -1,3 +1,4 @@
+/* use .something to refer to a div, use # to refer to an ID, use just the name if it's a standard html element*/
 
 .subhead{
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -14,13 +15,13 @@
   height: 200px;
   width: 200px;
 
-  margin: 7px;
+  margin: 10px;
   border-style: hidden;
-  border-radius: 7%;
+  border-radius: 50%;
 }
 
 img {
   height: inherit;
   width: inherit;
-  border-radius: 7%;
+  border-radius: 50%;
 }
