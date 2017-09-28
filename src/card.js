@@ -15,6 +15,7 @@ class Card extends React.Component {
     this.props.whenClicked(this.props.id)
   }
 
+// function to return a different class name when the prop "isFlipped"
   getClassName = () => {
     if (this.props.isFlipped) {
       return "card flipped"
@@ -42,7 +43,7 @@ class Card extends React.Component {
           className = {this.getClassName()} // actually want to call the function
           onClick = {this.handleClick} // just passing the function  //
           >
-       <img src={this.props.isFlipped ? this.props.src  : "/images/back2.jpg" } />
+       <img src={this.props.src} />
       </div>
     )
   }
