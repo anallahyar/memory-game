@@ -12,8 +12,17 @@ class Card extends React.Component {
 // this will call the "whenClicked" function which was passed into the Card as a prop from the Game component
 
   handleClick = () => {
-    this.props.whenClicked(this.props.src)
+    this.props.whenClicked(this.props.id)
   }
+
+  getClassName = () => {
+    if (this.props.isFlipped) {
+      return "card flipped"
+    } else {
+      return "card back"
+    }
+  }
+
 
 // render() is a required function for our component
 // React will invoke this function when it mounts the component
@@ -29,8 +38,11 @@ class Card extends React.Component {
     // on this.props and onClick becomes { onClick: () => {} }
 
     return (
-      <div onClick = {this.handleClick} className='card'>
-       <img src={this.props.src} />
+      <div
+          className = {this.getClassName()} // actually want to call the function
+          onClick = {this.handleClick} // just passing the function  //
+          >
+       <img src={this.props.isFlipped ? this.props.src  : "/images/back2.jpg" } />
       </div>
     )
   }

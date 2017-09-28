@@ -18,9 +18,23 @@
   margin: 10px;
   border-style: hidden;
   border-radius: 50%;
+	background-color: tomato;
+	border-style: solid;
 }
 
-img {
+.flipped img {
+	visibility: visible;
+}
+
+.back img {
+		visibility: hidden;
+}
+/* replace the card back with a default card */
+/* paste into */
+ /*<img src={this.props.isFlipped ? this.props.src  : "/images/back2.jpg" } />*/
+
+
+img  {
   height: inherit;
   width: inherit;
   border-radius: 50%;
