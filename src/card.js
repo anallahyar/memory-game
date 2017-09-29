@@ -19,6 +19,8 @@ class Card extends React.Component {
   getClassName = () => {
     if (this.props.isFlipped) {
       return "card flipped"
+    } else if (this.props.isMatched) {
+     return "card matched"
     } else {
       return "card back"
     }
@@ -42,6 +44,7 @@ class Card extends React.Component {
       <div
           className = {this.getClassName()} // actually want to call the function
           onClick = {this.handleClick} // just passing the function  //
+          id
           >
        <img src={this.props.src} />
       </div>

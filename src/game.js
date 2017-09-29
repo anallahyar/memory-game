@@ -29,7 +29,9 @@ class Game extends React.Component {
     return shuffledPhotos.map((url) => ({
       src: url,
       isFlipped: false,
-      id: uuidv4()
+      id: uuidv4(),
+      isMatched: false
+      // new property = isMatched = false
     }))
   }
 
@@ -43,47 +45,55 @@ class Game extends React.Component {
 //
 // Finally we call 'this.setState' with the new array we've built
 
-    handleCardClicked = (clickedCardId) => {
+handleCardClicked = (clickedCardId) => {
 
       const newCardsState = this.state.cards.map((card) => {
         if (card.id === clickedCardId) {
-          card.isFlipped = true
-        }
-        return card //this is each item in the array that we want to return
+          card.isFlipped = true}
+          return card //this is each item in the array that we want to return
       })
-
-      this.setState   ({ cards: newCardsState }, this.checkIfCardsMatched)
+      this.setState   ({ cards: newCardsState }, this.cardCount)
     }
 
-    checkIfCardsMatched = () => {
+    cardCount = () => {
 
       const flippedCards = this.state.cards.filter((card) => {
         return card.isFlipped
       })
-
       if (flippedCards.length === 2) {
-        setTimeout (() => {
-            // 
-            // If (flippedCards[0].src === flippedCards[1].src) {
-            //   console.log("matched")
-            // }
-            //
-            // clearMatch = (card1, card2) => {
-            //
-            // }
-            //
-            const newCardsState = this.state.cards.map((card) => {
-              card.isFlipped = false
-              return card
-
-            })
-
-          this.setState  ({ cards: newCardsState })
-        } , 1000)
+         this.matchCards(flippedCards)}
       }
-    }
+
+    matchCards = (flippedCards) => {
+
+       if (flippedCards[0].src === flippedCards[1].src) {
+          console.log("matched")
+
+          const matchedCards = this.state.cards.map((card) => {
+             if (card.id === flippedCards[0].id || card.id === flippedCards[1].id) {
+               card.isMatched = true
+               card.isFlipped = false}
+               return card
+            })
+            this.setState ({ cards: matchedCards })
+         }  else { setTimeout (this.flipBack, 1000) }
+      }
+
+    flipBack = () => {
+        const newCardsState = this.state.cards.map((card) => {
+          card.isFlipped = false
+          return card
+        })
+
+      this.setState  ({ cards: newCardsState })
+      }
+
+//   setTimeout (() => {}, 1000)
 
 
+//  Because we changed some properties of the component
+//  we need to set the state for them to take effect
+//  Only if an individual state is changed will it re-render
 
 // create a new instance of the Card component. With the following props:
   //  src: the url of the photo
@@ -106,6 +116,7 @@ class Game extends React.Component {
                     id = {card.id}
                     src={card.src}
                     isFlipped={card.isFlipped}
+                    isMatched={card.isMatched}
                     whenClicked={this.handleCardClicked} /> //updating render function to use the state
               ))}
           </div>
