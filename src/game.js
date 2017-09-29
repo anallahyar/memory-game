@@ -1,5 +1,6 @@
 import React from "react"
 import Card from "./card"
+import Success from "./success"
 // var shuffle = require('shuffle-array')
 import shuffle from "shuffle-array"
 // const uuidv4 = require('uuid/v4');
@@ -69,6 +70,8 @@ handleCardClicked = (clickedCardId) => {
        if (flippedCards[0].src === flippedCards[1].src) {
           console.log("matched")
 
+         //  setTimeout (() => {})
+
           const matchedCards = this.state.cards.map((card) => {
              if (card.id === flippedCards[0].id || card.id === flippedCards[1].id) {
                card.isMatched = true
@@ -110,6 +113,11 @@ handleCardClicked = (clickedCardId) => {
               <h1><center>memory</center>
               <br/>
               <div className = 'subhead'><center>match the modes to win!</center></div></h1>
+
+              {this.state.cards.filter((card) => {
+                  return card.isMatched === false
+              }).length === 0 && <Success />}
+
               {this.state.cards.map((card) => (
                 <Card
                     key = {card.id}
