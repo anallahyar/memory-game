@@ -67,10 +67,10 @@ handleCardClicked = (clickedCardId) => {
 
     matchCards = (flippedCards) => {
 
+      setTimeout (() => {
+
        if (flippedCards[0].src === flippedCards[1].src) {
           console.log("matched")
-
-   //  setTimeout (() => {})
 
           const matchedCards = this.state.cards.map((card) => {
              if (card.id === flippedCards[0].id || card.id === flippedCards[1].id) {
@@ -79,8 +79,8 @@ handleCardClicked = (clickedCardId) => {
                return card
             })
             this.setState ({ cards: matchedCards })
-         }  else { setTimeout (this.flipBack, 1000) }
-   //   }  else { setTimeout (this.flipBack, 1000) }
+         }  else { this.flipBack() }
+      }, 1000)
       }
 
     flipBack = () => {
