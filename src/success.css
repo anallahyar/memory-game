@@ -1,9 +1,33 @@
 .success {
    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 20px;
+	font-size: 50px;
 	font-style: normal;
 	font-variant:normal;
 	font-weight: 500;
-	line-height: 20px;
+	line-height: 34px;
    color: tomato;
+}
+
+
+h2 {
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 22px;
+	font-style: normal;
+	font-variant:normal;
+	font-weight: 500;
+	line-height: 24px;
+   color: white;
+}
+
+.resetButton{
+
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: 22px;
+   font-style: normal;
+   font-variant:normal;
+   font-weight: 500;
+   line-height: 24px;
+   color: #393b40;
+   padding: 10px;
+
 }

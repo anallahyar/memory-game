@@ -70,7 +70,7 @@ handleCardClicked = (clickedCardId) => {
        if (flippedCards[0].src === flippedCards[1].src) {
           console.log("matched")
 
-         //  setTimeout (() => {})
+   //  setTimeout (() => {})
 
           const matchedCards = this.state.cards.map((card) => {
              if (card.id === flippedCards[0].id || card.id === flippedCards[1].id) {
@@ -80,6 +80,7 @@ handleCardClicked = (clickedCardId) => {
             })
             this.setState ({ cards: matchedCards })
          }  else { setTimeout (this.flipBack, 1000) }
+   //   }  else { setTimeout (this.flipBack, 1000) }
       }
 
     flipBack = () => {
@@ -92,6 +93,10 @@ handleCardClicked = (clickedCardId) => {
       }
 
 //   setTimeout (() => {}, 1000)
+
+
+   resetButton = () => {
+     this.setState ({ cards: this.setupGame()}) } // this is a function given by extending our React class
 
 
 //  Because we changed some properties of the component
@@ -112,8 +117,10 @@ handleCardClicked = (clickedCardId) => {
           <div>
               <h1><center>memory</center>
               <br/>
-              <div className = 'subhead'><center>match the modes to win!</center></div></h1>
-
+              <div className = 'subhead'>match the modes to win!</div></h1>
+              <button className = 'resetButton' onClick={this.resetButton}> start over</button>
+              <br/>
+              <br/>
               {this.state.cards.filter((card) => {
                   return card.isMatched === false
               }).length === 0 && <Success />}

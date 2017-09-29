@@ -7,7 +7,11 @@ class Success extends React.Component {
      return (
         <div className = "success">
         <center>
-        You win!
+        <br />
+        <br />
+        <br />
+        ⚡ congratulations ⚡ <br />
+        <h2>you have the memory of an elephant </h2>
         </center>
         </div>
      )
