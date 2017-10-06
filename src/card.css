@@ -1,6 +1,10 @@
-/* use .something to refer to a div, use # to refer to an ID, use just the name if it's a standard html element*/
+/*
+	use .something to refer to a div
+	use # to refer to an ID
+	use just the name if it's a standard html element
+*/
 
-.subhead{
+.subhead {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 20px;
 	font-style: normal;
@@ -11,17 +15,14 @@
 
 .card {
   display: inline-block;
-  float:left;
   height: 200px;
   width: 200px;
-
   margin: 15px;
   border-style: hidden;
   border-radius: 50%;
-	background-color: tomato;
-	border-style: solid;
+  background-color: tomato;
+  border-style: solid;
 }
-
 
 .flipped img {
 	visibility: visible;
@@ -38,9 +39,11 @@
 img  {
   height: inherit;
   width: inherit;
-  border-radius: 50%;
+  border-radius: inherit;
 }
 
-/* replace the card back with a default card */
-/* paste into */
- /*<img src={this.props.isFlipped ? this.props.src  : "/images/back2.jpg" } />*/
+/*
+	replace the card back with a default card
+	paste into
+ 	<img src={this.props.isFlipped ? this.props.src  : "/images/back2.jpg" } />
+*/

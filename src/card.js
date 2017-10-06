@@ -26,7 +26,6 @@ class Card extends React.Component {
     }
   }
 
-
 // render() is a required function for our component
 // React will invoke this function when it mounts the component
 

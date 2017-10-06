@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <link rel="shortcut icon" href="http://localhost:3000/favicon.ico">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style type="text/css">body {
+  background-color: #393b40;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-variant:normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: 	white;
+  text-align: center;
+}
+</style><style type="text/css">/* use .something to refer to a div, use # to refer to an ID, use just the name if it's a standard html element*/
+
+.subhead{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-variant:normal;
+	font-weight: 500;
+	line-height: 20px;
+}
+
+.card {
+  display: inline-block;
+  float:left;
+  height: 200px;
+  width: 200px;
+
+  margin: 15px;
+  border-style: hidden;
+  border-radius: 50%;
+	background-color: tomato;
+	border-style: solid;
+}
+
+
+.flipped img {
+	visibility: visible;
+}
+
+.back img {
+		visibility: hidden;
+}
+
+.matched {
+	visibility: hidden;
+}
+
+img  {
+  height: inherit;
+  width: inherit;
+  border-radius: 50%;
+}
+
+/* replace the card back with a default card */
+/* paste into */
+ /*<img src={this.props.isFlipped ? this.props.src  : "/images/back2.jpg" } />*/
+</style><style type="text/css">.success {
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 50px;
+	font-style: normal;
+	font-variant:normal;
+	font-weight: 500;
+	line-height: 34px;
+   color: tomato;
+}
+
+
+h2 {
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 22px;
+	font-style: normal;
+	font-variant:normal;
+	font-weight: 500;
+	line-height: 24px;
+   color: white;
+}
+
+.resetButton{
+
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: 22px;
+   font-style: normal;
+   font-variant:normal;
+   font-weight: 500;
+   line-height: 24px;
+   color: #393b40;
+   padding: 10px;
+
+}
+</style></head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"><div data-reactroot=""><h1><center>memory</center><br><div class="subhead">match the modes to win!</div></h1><button class="resetButton"> start over</button><br><br><div class="card back" id="true"><img src="./React App_files/sj.jpg"></div><div class="card back" id="true"><img src="./React App_files/ferry.jpg"></div><div class="card back" id="true"><img src="./React App_files/drivenow.jpg"></div><div class="card back" id="true"><img src="./React App_files/cyclist.jpg"></div><div class="card back" id="true"><img src="./React App_files/bus.jpg"></div><div class="card back" id="true"><img src="./React App_files/metro.jpg"></div><div class="card back" id="true"><img src="./React App_files/sj.jpg"></div><div class="card back" id="true"><img src="./React App_files/drivenow.jpg"></div><div class="card back" id="true"><img src="./React App_files/metro.jpg"></div><div class="card back" id="true"><img src="./React App_files/bus.jpg"></div><div class="card back" id="true"><img src="./React App_files/ferry.jpg"></div><div class="card back" id="true"><img src="./React App_files/cyclist.jpg"></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script type="text/javascript" src="./React App_files/bundle.js"></script>
+
+<iframe style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; border: none; z-index: 2147483647;" src="./React App_files/saved_resource.html"></iframe></body></html>

@@ -19,8 +19,7 @@ h2 {
    color: white;
 }
 
-.resetButton{
-
+.resetButton {
    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
    font-size: 22px;
    font-style: normal;
@@ -29,5 +28,4 @@ h2 {
    line-height: 24px;
    color: #393b40;
    padding: 10px;
-
 }
